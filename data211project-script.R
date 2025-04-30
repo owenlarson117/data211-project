@@ -17,7 +17,7 @@ log_data_renamed <- log_data %>%
 ggplot(log_data_renamed, aes(x = Time_s, y = Intake_Temp, color = RPM)) +
   geom_line(linewidth = 1.2) + 
   geom_vline(xintercept = 45, linetype = "dashed", color = "black") + 
-  annotate("text", x = 50, y = max(log_data_renamed$Intake_Temp), label = "Heat Soak Begins ?", hjust = 0) +
+  annotate("text", x = 50, y = max(log_data_renamed$Intake_Temp), label = "Heat Soak Begins ?", hjust = 5) +
   scale_color_gradient(low = "blue", high = "red") +
   labs(
     title = "Heat Soak Over Time: Intake Temperature vs RPM",
